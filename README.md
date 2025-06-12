@@ -78,7 +78,7 @@ This project explores real-time communication protocols by implementing chat app
 ## Framework Comparison
 
 | Feature | Node.js + ws | Python + FastAPI | 
-|---------|--------------|------------------|-----------------|-----------------|
+|---------|--------------|------------------|
 | Connection Model | Event-driven, non-blocking | AsyncIO with ASGI | 
 | WebSocket Support | Native via ws library | Native via Starlette | 
 | Long Polling Support | Manual implementation with Express | Native FastAPI endpoints |

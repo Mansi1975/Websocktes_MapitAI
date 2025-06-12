@@ -2,10 +2,11 @@
 
 A comprehensive implementation and comparison of real-time chat applications using different frameworks and connection types. This project demonstrates WebSocket and long polling implementations with performance analysis and framework comparisons.
 
+## Am Mansi, to-be thirdie in Electrical engineering at IIT Bombay.
+## Roll number: 23B1288 
+
 ## Project Overview
 
-# Am Mansi, to-be thirdie in Electrical engineering at IIT Bombay.
-# Roll number: 23B1288 
 This project explores real-time communication protocols by implementing chat applications using various web frameworks. The focus is on understanding how different frameworks handle concurrent connections and comparing the performance characteristics of WebSocket.
 
 ## Framework Selection and Justification

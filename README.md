@@ -117,6 +117,12 @@ uvicorn main:app --reload
 3. Enter messages to see real-time communication
 4. Monitor connection handling and performance metrics
 
+### Cloning
+Clone the repos seperately and kindly run via locust 
+Obtained results report a span users: 20, soan: 5.
+Can be found as Websockets_mult -- distributed
+                FASTAPI_wbst
+
 ## Performance Testing
 
 Load testing performed using Locust framework to simulate concurrent users and measure:

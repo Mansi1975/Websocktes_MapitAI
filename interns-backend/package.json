@@ -1,0 +1,27 @@
+{
+  "name": "interns-backend",
+  "version": "1.0.0",
+  "description": "Status: In Progress\r Date Asked: June 8, 2025\r Follow-up Required: No",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edme-tutor/interns-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/edme-tutor/interns-backend/issues"
+  },
+  "homepage": "https://github.com/edme-tutor/interns-backend#readme",
+  "dependencies": {
+    "ws": "^8.18.2"
+  }
+}

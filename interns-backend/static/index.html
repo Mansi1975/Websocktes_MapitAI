@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple WebSocket Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+        #chat { max-width: 500px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 20px; }
+        #messages { height: 300px; overflow-y: auto; border: 1px solid #eee; padding: 10px; margin-bottom: 10px; background: #fafafa; }
+        #input { display: flex; }
+        #input input { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        #input button { margin-left: 10px; padding: 10px 20px; border: none; background: #007bff; color: #fff; border-radius: 4px; cursor: pointer; }
+        #input button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div id="chat">
+        <select id="protocol" onchange="changeProtocol()">
+  <option value="WebSocket">WebSocket</option>
+  <option value="LongPolling">Long Polling</option>
+</select>
+        <div id="messages"></div>
+        <div id="input">
+            <input type="text" id="msg" placeholder="Type a message..." autocomplete="off" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    
+<script>
+   
+    //let currentScript = null;
+
+    // function changeProtocol() {
+    //   const protocol = document.getElementById('protocol').value.toLowerCase();
+
+    //   if (currentScript) {
+    //     document.body.removeChild(currentScript);
+    //   }
+
+    //   const script = document.createElement('script');
+    //   script.src = `js/${protocol}.js`;
+    //   script.setAttribute('data-protocol', protocol);
+    //   document.body.appendChild(script);
+    //   currentScript = script;
+    // }
+    let currentScript = null;
+
+    function changeProtocol() {
+    const protocol = document.getElementById('protocol').value;
+     if (currentScript) {
+    currentScript.remove();  // remove previously loaded protocol script
+  }
+
+    const script = document.createElement('script');
+    script.src = `${protocol === 'WebSocket' ? 'wbskt.js' : 'lp.js'}`;
+    script.id = 'dynamic-script';
+    document.body.appendChild(script);
+    currentScript = script;
+}
+
+
+    window.onload = changeProtocol;
+  </script>
+
+
+    <!-- <script src="wbskt.js"></script>
+    <script src="lp.js"></script> -->
+</body>
+</html>

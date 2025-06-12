@@ -1,0 +1,21 @@
+.msg {
+    padding: 8px 12px;
+    margin: 6px 0;
+    max-width: 70%;
+    border-radius: 12px;
+    clear: both;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.left {
+    background: #e1f0ff;
+    float: left;
+    text-align: left;
+}
+
+.right {
+    background: #dcf8c6;
+    float: right;
+    text-align: right;
+}
